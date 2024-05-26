@@ -1,11 +1,11 @@
-import { AnimationMotion, animateNames } from "animax";
+import { Motions, createAnimate, motions } from "animax";
 import { useEffect, useRef, useState } from "react";
-import { createAnimate } from "../../../src";
 import Input from "../components/Input";
 import Label from "../components/Label";
 import Select from "../components/Select";
+
 type FormProps = {
-  motion?: AnimationMotion;
+  motion?: Motions;
   infinite?: boolean;
   once?: boolean;
   duration?: number;
@@ -50,7 +50,7 @@ export default function Animate() {
             onChange={(e) => setDate("motion", e.target.value)}
           >
             <option>Choose a motion</option>
-            {animateNames.map((name, i) => (
+            {motions.map((name, i) => (
               <option key={i} value={name}>
                 {name}
               </option>

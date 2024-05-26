@@ -1,4 +1,4 @@
-export default [
+export const motions = [
     "bounce",
     "flash",
     "pulse",
@@ -80,3 +80,5 @@ export default [
     "rollOut",
     "rollInOut",
 ] as const;
+
+export type Motions = typeof motions[number];
