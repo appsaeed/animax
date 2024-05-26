@@ -1,54 +1,63 @@
 {
-  "name": "animaties",
-  "version": "1.0.0",
-  "description": "animaties",
+  "name": "animax",
+  "version": "1.0.3",
+  "private" : false,
+  "description": "Animax is a versatile CSS animation library that supports various animations. It can be seamlessly implemented in client-side JavaScript projects, including Vite, React, and vanilla JavaScript. With Animax, adding dynamic motion to your web applications is effortless and efficient.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
   "scripts": {
-      "test": "jest",
-      "build": "tsc",
-      "rm": "rm -rf ./dist",
-      "upload": "tsc && npm publish  --access public"
+    "test": "jest",
+    "build": "rm -rf ./dist && tsc && cp ./src/index.css ./dist/index.css",
+    "rm": "rm -rf ./dist",
+    "upload": "tsc && npm publish  --access public"
   },
   "repository": {
-      "type": "git",
-      "url": "git+https://github.com/appsaeed/animaties.git"
+    "type": "git",
+    "url": "git+https://github.com/appsaeed/animax.git"
   },
   "keywords": [
-      "utilies",
-      "utilities",
-      "javascript utilities",
-      "utils",
-      "appsaeed"
+    "animax",
+    "animation",
+    "animate",
+    "motion",
+    "transition",
+    "effect",
+    "animator",
+    "movement",
+    "css-animation",
+    "js-animation",
+    "animation-library",
+    "animation-tool",
+    "animation-framework",
+    "web-animation",
+    "animation-script",
+    "animating",
+    "motion-effect",
+    "transformation"
   ],
   "author": "appsaeed",
   "license": "MIT",
   "bugs": {
-      "url": "https://github.com/appsaeed/animaties/issues"
+    "url": "https://github.com/appsaeed/animax/issues"
   },
-  "homepage": "https://github.com/appsaeed/animaties",
+  "homepage": "https://github.com/appsaeed/animax.git#readme",
   "files": [
-      "dist/"
+    "dist/"
   ],
   "exports": {
-      ".": {
-          "types": "./dist/index.d.ts",
-          "import": "./dist/index.js",
-          "default": "./dist/index.js",
-          "require": "./dist/index.js"
-      },
-      "./*": {
-          "types": "./dist/*.d.ts",
-          "import": "./dist/*.js",
-          "default": "./dist/*.js",
-          "require": "./dist/*.js"
-      }
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js",
+      "require": "./dist/index.js"
+    },
+    "./*": {
+      "types": "./dist/*.d.ts",
+      "import": "./dist/*.js",
+      "default": "./dist/*.js",
+      "require": "./dist/*.js"
+    }
   },
-  "devDependencies": {
-      "@types/jest": "^29.5.12",
-      "jest": "^29.7.0",
-      "jest-environment-jsdom": "^29.7.0",
-      "ts-jest": "^29.1.2"
-  }
+  "devDependencies": { }
 }
