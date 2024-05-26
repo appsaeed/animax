@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div style="width: 40%; height: 100px; background: green; margin: auto;" id="demo">
+        Hello world
+    </div>
+    <script type="module">
+        import {createAnimate } from './dist/index.js'
+        const demo = document.getElementById('demo');
+        createAnimate({element: demo , infinite: true , once: false})
+    </script>
+</body>
+</html>

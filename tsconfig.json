@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "esnext",
+    "lib": ["es5", "es2015", "dom", "es2015.promise"],
+    "moduleResolution": "node",
+    "declaration": true,
+    // "declarationDir": "declaration",
+    "outDir": "dist",
+    "rootDir": "src",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
+    // "types": ["node"]
+  },
+  "include": ["src"],
+  "exclude": ["tests"]
+}

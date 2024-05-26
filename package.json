@@ -1,0 +1,54 @@
+{
+  "name": "animaties",
+  "version": "1.0.0",
+  "description": "animaties",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+      "test": "jest",
+      "build": "tsc",
+      "rm": "rm -rf ./dist",
+      "upload": "tsc && npm publish  --access public"
+  },
+  "repository": {
+      "type": "git",
+      "url": "git+https://github.com/appsaeed/animaties.git"
+  },
+  "keywords": [
+      "utilies",
+      "utilities",
+      "javascript utilities",
+      "utils",
+      "appsaeed"
+  ],
+  "author": "appsaeed",
+  "license": "MIT",
+  "bugs": {
+      "url": "https://github.com/appsaeed/animaties/issues"
+  },
+  "homepage": "https://github.com/appsaeed/animaties",
+  "files": [
+      "dist/"
+  ],
+  "exports": {
+      ".": {
+          "types": "./dist/index.d.ts",
+          "import": "./dist/index.js",
+          "default": "./dist/index.js",
+          "require": "./dist/index.js"
+      },
+      "./*": {
+          "types": "./dist/*.d.ts",
+          "import": "./dist/*.js",
+          "default": "./dist/*.js",
+          "require": "./dist/*.js"
+      }
+  },
+  "devDependencies": {
+      "@types/jest": "^29.5.12",
+      "jest": "^29.7.0",
+      "jest-environment-jsdom": "^29.7.0",
+      "ts-jest": "^29.1.2"
+  }
+}
