@@ -1,3 +1,5 @@
 docs
 scr
 tsconfig.json
+esbuild.js
+node_modules

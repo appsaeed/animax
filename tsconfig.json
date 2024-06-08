@@ -20,7 +20,7 @@
     /* Bundler mode */
     // "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
-    "isolatedModules": true,
+    // "isolatedModules": true,
     // "noEmit": true,
   },
   "include": ["src"],

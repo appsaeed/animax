@@ -1,6 +1,7 @@
 import { cssToMillisecond } from "./utilies";
 
 
+import { cleanAnimaxStyle } from "./cleanAnimaxStyle";
 import { Motions } from "./motions";
 
 export type AnimateStyleProps = {
@@ -25,17 +26,15 @@ export type AnimateProps = AnimateStyleProps & {
  */
 export function createAnimateStyle(props: AnimateStyleProps): string {
 
-    const init: AnimateStyleProps = {
-        motion: 'lightSpeedIn',
-        duration: '1s',
-        infinite: false
-    };
-    const { motion, duration, infinite, style } = { ...init, ...props };
+
+    const { infinite = false } = props;
+    const motion = props?.motion || 'lightSpeedIn';
+    const duration = props?.duration || '1s';
+    const style = props?.style || '';
 
     const _infinite = infinite ? "animation-iteration-count: infinite;" : "";
 
-    return `
-          -webkit-animation-name: ${motion};
+    return `-webkit-animation-name: ${motion};
           animation-name: ${motion};
           -webkit-animation-timing-function: ease-out;
           animation-timing-function: ease-out;
@@ -47,28 +46,6 @@ export function createAnimateStyle(props: AnimateStyleProps): string {
           ${style}`;
 }
 
-
-
-export function cleanAnimaxStyle(style: string | undefined | null) {
-    const animationProperties = [
-        'animation-name',
-        'animation-duration',
-        'animation-timing-function',
-        'animation-iteration-count',
-        'animation-fill-mode',
-        '-webkit-animation-name',
-        '-webkit-animation-duration',
-        '-webkit-animation-timing-function',
-        '-webkit-animation-iteration-count',
-        '-webkit-animation-fill-mode',
-    ];
-
-    // Create a regular expression to match these properties
-    const regex = new RegExp(`(?:${animationProperties.join('|')}):\\s*[^;]+;?`, 'g');
-
-    // Remove animation properties from the style string
-    return String(style).replace(regex, '');
-}
 
 
 export function createAnimate(props: AnimateProps) {

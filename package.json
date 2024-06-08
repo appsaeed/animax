@@ -1,15 +1,14 @@
 {
   "name": "animax",
-  "version": "1.0.8",
-  "private" : false,
+  "version": "1.9.0",
+  "private": false,
   "description": "Animax is a versatile CSS animation library that supports various animations. It can be seamlessly implemented in client-side JavaScript projects, including Vite, React, and vanilla JavaScript. With Animax, adding dynamic motion to your web applications is effortless and efficient.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
   "scripts": {
     "test": "jest",
-    "build": "rm -rf ./dist && tsc && cp ./src/index.css ./dist/index.css",
-    "rm": "rm -rf ./dist",
+    "build": "tsc && node esbuild.js",
     "upload": "tsc && npm publish  --access public"
   },
   "repository": {
@@ -59,5 +58,7 @@
       "require": "./dist/*.js"
     }
   },
-  "devDependencies": { }
+  "devDependencies": {
+    "esbuild": "0.21.4"
+  }
 }
